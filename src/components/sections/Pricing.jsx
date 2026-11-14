@@ -34,8 +34,8 @@ export function Pricing() {
               <span className="pricing-old-price">De {PRICING_DATA.originalPrice} por apenas</span>
               <div className="pricing-main-price">
                 <span className="currency">R$</span>
-                <span className="amount">39</span>
-                <span className="cents">,90</span>
+                <span className="amount">49</span>
+                <span className="cents">,99</span>
               </div>
               <span className="pricing-installment-tag">ou em até <strong>{PRICING_DATA.installments}</strong></span>
             </div>

@@ -225,9 +225,9 @@ export const FAQ_ITEMS = [
 ];
 
 export const PRICING_DATA = {
-  originalPrice: 'R$ 99,90',
-  currentPrice: 'R$ 39,90',
-  installments: 'em até 12x de R$ 3,90',
+  originalPrice: 'R$ 109,99',
+  currentPrice: 'R$ 49,99',
+  installments: 'em até 12x de R$ 4,99',
   guaranteeDays: 7,
   ctaText: 'Quero Garantir Minha Vaga com Desconto',
   benefits: [
