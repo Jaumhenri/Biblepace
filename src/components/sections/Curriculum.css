@@ -1,0 +1,150 @@
+.curriculum-section {
+  background: var(--bg-primary);
+}
+
+.curriculum-list-light {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.block-accordion-card {
+  background: var(--primary);
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(224, 83, 38, 0.2);
+  transition: all var(--transition-fast);
+}
+
+.block-accordion-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(224, 83, 38, 0.3);
+}
+
+.block-accordion-header {
+  width: 100%;
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  gap: 16px;
+  background: var(--primary);
+}
+
+.block-header-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.block-pill-badge {
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  background: #0d0d0d;
+  padding: 6px 14px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.block-title-text {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.block-sub-text {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.block-header-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.modules-pill-tag {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #ffffff;
+  background: #0d0d0d;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+.chevron-box {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.block-accordion-body {
+  border-top: 1px solid var(--border-subtle);
+  padding: 24px 28px;
+  background: #fdfdfd;
+}
+
+.modules-grid-light {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.module-item-box {
+  background: #f7f7f9;
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.module-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.module-code-tag {
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: var(--primary);
+}
+
+.module-verse-quote {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: var(--text-subtle);
+}
+
+.module-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.module-desc-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .block-accordion-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .block-header-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .modules-grid-light {
+    grid-template-columns: 1fr;
+  }
+}

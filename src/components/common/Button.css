@@ -1,0 +1,83 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  line-height: 1;
+}
+
+.btn-sm {
+  padding: 10px 20px;
+  font-size: 0.75rem;
+}
+
+.btn-md {
+  padding: 14px 28px;
+  font-size: 0.82rem;
+}
+
+.btn-lg {
+  padding: 18px 36px;
+  font-size: 0.88rem;
+}
+
+/* White Pill Button (inside dark or blue cards) */
+.btn-white {
+  background: #ffffff;
+  color: #0d0d0d;
+}
+
+.btn-white:hover {
+  background: #f0f0f0;
+  transform: translateY(-1px);
+}
+
+/* Black Pill Button */
+.btn-black {
+  background: #0d0d0d;
+  color: #ffffff;
+}
+
+.btn-black:hover {
+  background: #262626;
+  transform: translateY(-1px);
+}
+
+/* Orange Pill Button */
+.btn-orange {
+  background: #e05326;
+  color: #ffffff;
+}
+
+.btn-orange:hover {
+  background: #c4441c;
+  transform: translateY(-1px);
+}
+
+/* Soft Gray Pill Button */
+.btn-gray {
+  background: #e6e6e6;
+  color: #0d0d0d;
+}
+
+.btn-gray:hover {
+  background: #d8d8d8;
+  transform: translateY(-1px);
+}
+
+.btn-icon {
+  transition: transform var(--transition-fast);
+}
+
+.btn:hover .btn-icon {
+  transform: translateX(3px);
+}

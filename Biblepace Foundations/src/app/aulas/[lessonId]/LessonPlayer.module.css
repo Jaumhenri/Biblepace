@@ -1,0 +1,471 @@
+.pageLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 28px;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+@media (max-width: 1100px) {
+  .pageLayout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.mainColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.backRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dark);
+  transition: all var(--transition-fast);
+}
+
+.backLink:hover {
+  color: var(--primary);
+  transform: translateX(-3px);
+}
+
+/* Video Player Box (Solid Flat Black matching LP) */
+.playerContainer {
+  background-color: var(--accent-black);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+  position: relative;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.videoScreen {
+  position: absolute;
+  inset: 0;
+  background-color: var(--accent-black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.watermark {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #FFFFFF;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  pointer-events: none;
+}
+
+.bigPlayButton {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-pill);
+  background-color: var(--primary);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(224, 83, 38, 0.4);
+  transition: transform var(--transition-fast);
+}
+
+.bigPlayButton:hover {
+  transform: scale(1.08);
+}
+
+.playerControlsBar {
+  position: relative;
+  z-index: 10;
+  background-color: var(--accent-black);
+  border-top: 1px solid #222222;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.timelineTrack {
+  width: 100%;
+  height: 6px;
+  background-color: #222222;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  position: relative;
+}
+
+.timelineFill {
+  height: 100%;
+  background-color: var(--primary);
+  border-radius: var(--radius-pill);
+  width: 35%;
+}
+
+.controlsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #FFFFFF;
+}
+
+.leftControls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.controlButton {
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity var(--transition-fast);
+}
+
+.controlButton:hover {
+  opacity: 0.8;
+}
+
+.timeDisplay {
+  font-size: 0.8rem;
+  color: #FFFFFF;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+.rightControls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.speedBadge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  background-color: #FFFFFF;
+  color: var(--accent-black);
+  padding: 3px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Lesson Header & Action Row */
+.lessonMetaCard {
+  background-color: var(--bg-card-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  box-shadow: var(--shadow-card-white);
+}
+
+.lessonInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.moduleTag {
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--primary);
+  letter-spacing: 0.08em;
+}
+
+.lessonTitle {
+  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  font-weight: 900;
+  color: var(--text-dark);
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+}
+
+.actionsRight {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.markCompleteButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--accent-black);
+  color: #FFFFFF;
+  padding: 14px 28px;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  border: none;
+}
+
+.markCompleteButton:hover {
+  background-color: #000000;
+  transform: translateY(-1px);
+}
+
+.completedButtonActive {
+  background-color: var(--primary);
+}
+
+.completedButtonActive:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Tabs Navigation matching LP */
+.tabsContainer {
+  background-color: var(--bg-card-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card-white);
+}
+
+.tabsHeader {
+  display: flex;
+  gap: 10px;
+  padding: 20px 28px;
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--bg-secondary);
+  overflow-x: auto;
+}
+
+.tabButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  background-color: #E6E6E6;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  border: none;
+}
+
+.tabButton:hover {
+  background-color: #D8D8D8;
+}
+
+.tabActive {
+  background-color: var(--accent-black);
+  color: #FFFFFF;
+}
+
+.tabActive:hover {
+  background-color: #000000;
+}
+
+.tabContent {
+  padding: 36px 32px;
+}
+
+/* Tab 1: Visão da Aula */
+.visionContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.verseCard {
+  background-color: var(--bg-card-gray);
+  border-left: 5px solid var(--primary);
+  padding: 18px 22px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+/* Tab 2: Reflexão */
+.reflectionList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reflectionItem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reflectionQuestion {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.reflectionTextarea {
+  width: 100%;
+  min-height: 90px;
+  padding: 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  resize: vertical;
+  background-color: var(--bg-card-gray);
+  font-family: var(--font-sans);
+}
+
+.reflectionTextarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  background-color: #FFFFFF;
+}
+
+/* Tab 3: Caderno de Anotações */
+.notebookContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.notebookHeaderRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notebookStatus {
+  font-size: 0.78rem;
+  color: var(--primary);
+  font-weight: 800;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.notebookInput {
+  width: 100%;
+  min-height: 240px;
+  font-size: 0.9rem;
+  outline: none;
+  resize: vertical;
+  font-family: var(--font-sans);
+}
+
+/* Right Column: Lessons Navigator Sidebar */
+.lessonNavigator {
+  background-color: var(--bg-card-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card-white);
+  position: sticky;
+  top: 90px;
+}
+
+.navHeader {
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.navHeaderTitle {
+  font-size: 0.92rem;
+  font-weight: 900;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+}
+
+.navHeaderSubtitle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.navLessonsList {
+  display: flex;
+  flex-direction: column;
+}
+
+.navLessonItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--color-border);
+  text-decoration: none;
+  color: var(--text-dark);
+  transition: background-color var(--transition-fast);
+}
+
+.navLessonItem:hover {
+  background-color: var(--bg-card-gray);
+}
+
+.navLessonActive {
+  background-color: var(--primary);
+  color: #FFFFFF;
+}
+
+.navLessonActive .navLessonTitle,
+.navLessonActive .navLessonDuration {
+  color: #FFFFFF;
+  font-weight: 800;
+}
+
+.navItemLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.navLessonTitle {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.navLessonDuration {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  flex-shrink: 0;
+}

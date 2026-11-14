@@ -1,0 +1,150 @@
+@import './variables.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark light;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-dark);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  color: var(--text-dark);
+  font-weight: 800;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-hover);
+}
+
+/* Layout Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+/* Slash Category Label (/CATEGORIA) */
+.slash-category {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  display: block;
+}
+.slash-category.text-white { color: #ffffff; }
+.slash-category.text-cream { color: var(--text-cream); }
+.slash-category.text-dark { color: var(--text-dark); }
+.slash-category.text-orange { color: var(--primary); }
+
+/* Section Header */
+.section-header-left {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.section-title-large {
+  font-size: 2.6rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: var(--text-dark);
+  max-width: 700px;
+}
+
+.section-subtitle-text {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin-top: 12px;
+}
+
+/* Solid Block Cards */
+.card-solid-white {
+  background: var(--bg-card-white);
+  color: var(--text-dark);
+  border-radius: var(--radius-card);
+  padding: 36px 32px;
+  border: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+.card-solid-white:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card-solid-gray {
+  background: var(--bg-card-gray);
+  color: var(--text-dark);
+  border-radius: var(--radius-card);
+  padding: 36px 32px;
+  border: none;
+  transition: transform var(--transition-fast);
+}
+
+.card-solid-black {
+  background: var(--bg-card-black);
+  color: #ffffff;
+  border-radius: var(--radius-card);
+  padding: 36px 32px;
+  transition: transform var(--transition-fast);
+}
+
+.card-solid-orange {
+  background: var(--bg-card-orange);
+  color: #ffffff;
+  border-radius: var(--radius-card);
+  padding: 36px 32px;
+  box-shadow: 0 8px 25px rgba(224, 83, 38, 0.25);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+.card-solid-orange:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(224, 83, 38, 0.35);
+}
+

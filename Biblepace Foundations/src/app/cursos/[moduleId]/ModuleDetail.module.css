@@ -1,0 +1,350 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dark);
+  transition: all var(--transition-fast);
+  width: fit-content;
+}
+
+.backLink:hover {
+  color: var(--primary);
+  transform: translateX(-3px);
+}
+
+.moduleHero {
+  background-color: var(--bg-card-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 44px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-shadow: var(--shadow-card-white);
+}
+
+@media (max-width: 768px) {
+  .moduleHero {
+    padding: 28px 20px;
+    gap: 18px;
+  }
+}
+
+.heroMeta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.blockBadge {
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background-color: var(--accent-black);
+  color: #FFFFFF;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+}
+
+.moduleNumber {
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.moduleTitle {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 900;
+  color: var(--text-dark);
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+/* Key Verse Box */
+.verseBox {
+  background-color: var(--bg-card-gray);
+  border-left: 6px solid var(--primary);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 24px 30px;
+}
+
+.verseText {
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.65;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.verseRef {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.88rem;
+  font-weight: 900;
+  color: var(--primary);
+  font-style: normal;
+  letter-spacing: 0.02em;
+}
+
+/* Main Idea Banner (Solid Black Box matching LP) */
+.mainIdeaBanner {
+  background-color: var(--accent-black);
+  color: #FFFFFF;
+  padding: 28px 32px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-card-black);
+}
+
+.mainIdeaTag {
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.mainIdeaText {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.55;
+  color: #FFFFFF;
+}
+
+/* Tags / Themes Chips */
+.themesRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.themeChip {
+  font-size: 0.75rem;
+  font-weight: 800;
+  background-color: var(--bg-card-gray);
+  border: 1px solid var(--color-border);
+  color: var(--text-dark);
+  padding: 7px 16px;
+  border-radius: var(--radius-pill);
+}
+
+/* Layout 2 Columns with generous room */
+.detailGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 28px;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+@media (max-width: 1100px) {
+  .detailGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* Lessons Section */
+.lessonsSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.sectionHeading {
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: var(--text-dark);
+  letter-spacing: -0.03em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+}
+
+.lessonsCount {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.lessonsList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.lessonCard {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: var(--text-dark);
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.lessonCard:hover {
+  border-color: var(--accent-black);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.lessonLeft {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.lessonStatusIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.statusCompleted {
+  background-color: var(--accent-black);
+  color: #FFFFFF;
+}
+
+.statusCurrent {
+  background-color: var(--primary);
+  color: #FFFFFF;
+}
+
+.lessonTitle {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+}
+
+.lessonDuration {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Sidebar Info Cards */
+.sidebarColumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.infoCard {
+  background-color: var(--bg-card-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 32px;
+  box-shadow: var(--shadow-card-white);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  font-size: 1.15rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--text-dark);
+}
+
+.challengeText {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-dark);
+  background-color: var(--bg-card-gray);
+  border: 1px solid var(--color-border);
+  padding: 20px 22px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.challengeButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 24px;
+  border-radius: var(--radius-pill);
+  background-color: var(--accent-black);
+  color: #FFFFFF;
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  border: none;
+}
+
+.challengeButton:hover {
+  background-color: #000000;
+  transform: translateY(-1px);
+}
+
+.challengeButtonCompleted {
+  background-color: var(--primary);
+}
+
+.challengeButtonCompleted:hover {
+  background-color: var(--primary-hover);
+}
+
+.downloadButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px 24px;
+  border-radius: var(--radius-pill);
+  background-color: var(--primary);
+  color: #FFFFFF;
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+}
+
+.downloadButton:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}

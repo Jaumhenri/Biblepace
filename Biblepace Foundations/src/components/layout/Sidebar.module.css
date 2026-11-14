@@ -1,0 +1,132 @@
+.sidebar {
+  width: var(--sidebar-width);
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: var(--bg-secondary);
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  z-index: 50;
+  transition: transform var(--transition-normal);
+}
+
+.sidebarHeader {
+  height: var(--topbar-height);
+  padding: 0 var(--space-lg);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--color-border);
+  background-color: #FFFFFF;
+}
+
+.brandName {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--text-dark);
+  letter-spacing: -0.04em;
+}
+
+.navContainer {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-md) var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.navSection {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sectionTitle {
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-subtle);
+  padding: 8px 12px 4px 12px;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+}
+
+.navLink:hover {
+  background-color: var(--bg-card-gray);
+  color: var(--text-dark);
+}
+
+.navLinkActive {
+  background-color: var(--primary);
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.navLinkActive:hover {
+  background-color: var(--primary-hover);
+  color: #FFFFFF;
+}
+
+.navLinkActive svg {
+  color: #FFFFFF;
+}
+
+.sidebarFooter {
+  padding: var(--space-md) var(--space-lg);
+  border-top: 1px solid var(--color-border);
+  background-color: #FFFFFF;
+}
+
+.footerMotto {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.mottoLogo {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.mottoText {
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.sidebarOverlay {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebarOpen {
+    transform: translateX(0);
+  }
+
+  .sidebarOverlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(13, 13, 13, 0.6);
+    z-index: 45;
+  }
+}

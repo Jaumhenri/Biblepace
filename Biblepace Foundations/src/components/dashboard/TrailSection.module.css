@@ -1,0 +1,108 @@
+.trailContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.trailHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 100%;
+  min-width: 0;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.sectionTitle {
+  font-size: 1.85rem;
+  font-weight: 900;
+  color: var(--text-dark);
+  letter-spacing: -0.04em;
+}
+
+.trailMeta {
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+}
+
+.viewAllLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-dark);
+  transition: all var(--transition-fast);
+}
+
+.viewAllLink:hover {
+  color: var(--primary);
+  transform: translateX(3px);
+}
+
+.blockFilterTabs {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scrollbar-width: none;
+  width: 100%;
+  max-width: 100%;
+}
+
+.blockFilterTabs::-webkit-scrollbar {
+  display: none;
+}
+
+/* Pill Tabs matching LP */
+.filterTab {
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 800;
+  white-space: nowrap;
+  background-color: #E6E6E6;
+  border: none;
+  color: var(--text-dark);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.filterTab:hover {
+  background-color: #D8D8D8;
+}
+
+.filterTabActive {
+  background-color: var(--accent-black);
+  color: #FFFFFF;
+}
+
+.filterTabActive:hover {
+  background-color: #000000;
+}
+
+/* Fluid responsive grid: 100% width fit, never overflows horizontally */
+.moduleGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}

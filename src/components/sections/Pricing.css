@@ -1,0 +1,129 @@
+.pricing-section {
+  background: var(--bg-primary);
+}
+
+.pricing-block-card {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px;
+  border-radius: 24px;
+  background: #0d0d0d;
+}
+
+.pricing-top-info {
+  margin-top: 16px;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.pricing-title-large {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.pricing-subtitle-text {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 6px;
+}
+
+.pricing-middle-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  margin-bottom: 36px;
+}
+
+.pricing-amount-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-old-price {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: line-through;
+}
+
+.pricing-main-price {
+  display: flex;
+  align-items: flex-start;
+  color: #ffffff;
+  line-height: 1;
+  margin: 6px 0;
+}
+
+.pricing-main-price .currency {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: 8px;
+  margin-right: 4px;
+}
+
+.pricing-main-price .amount {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.pricing-main-price .cents {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.pricing-installment-tag {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.pricing-benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.benefit-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.check-bullet {
+  color: #ff7c54;
+  font-weight: 900;
+}
+
+.pricing-bottom-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.guarantee-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+@media (max-width: 768px) {
+  .pricing-block-card {
+    padding: 32px 20px;
+  }
+  .pricing-middle-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .pricing-title-large {
+    font-size: 2.2rem;
+  }
+}

@@ -1,0 +1,307 @@
+.welcomeSection {
+  margin-bottom: var(--space-xl);
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--text-dark);
+  letter-spacing: -0.04em;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 1.1;
+}
+
+.wave {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: waveAnimation 2s infinite;
+}
+
+@keyframes waveAnimation {
+  0% { transform: rotate( 0.0deg) }
+  10% { transform: rotate(14.0deg) }
+  20% { transform: rotate(-8.0deg) }
+  30% { transform: rotate(14.0deg) }
+  40% { transform: rotate(-4.0deg) }
+  50% { transform: rotate(10.0deg) }
+  60% { transform: rotate( 0.0deg) }
+  100% { transform: rotate( 0.0deg) }
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+/* Top Dual Banners Grid */
+.topBannersGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  gap: 20px;
+  margin-bottom: var(--space-xl);
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+@media (max-width: 1100px) {
+  .topBannersGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+}
+
+/* Journey Card (Solid White matching LP .card-solid-white) */
+.journeyCard {
+  background-color: var(--bg-card-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-card-white);
+  transition: transform var(--transition-fast);
+}
+
+.journeyCard:hover {
+  transform: translateY(-2px);
+}
+
+.journeyTop {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.journeyIconBox {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: var(--bg-card-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.journeyLabel {
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: var(--primary);
+  text-transform: uppercase;
+}
+
+.journeyHeading {
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: var(--text-dark);
+  letter-spacing: -0.03em;
+  margin-top: 4px;
+}
+
+.journeyProgressRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.progressBarTrack {
+  flex: 1;
+  height: 8px;
+  background-color: #EAEAEF;
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.progressBarFill {
+  height: 100%;
+  background-color: var(--primary);
+  border-radius: var(--radius-pill);
+  transition: width 0.6s ease;
+}
+
+.percentageLabel {
+  font-size: 0.9rem;
+  font-weight: 900;
+  color: var(--text-dark);
+}
+
+.currentModuleLabel {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-top: 16px;
+  font-weight: 600;
+}
+
+.currentModuleLabel strong {
+  color: var(--text-dark);
+}
+
+/* Continue Watching Banner (Solid Flat Orange matching LP .card-solid-orange) */
+.continueBanner {
+  background-color: var(--primary);
+  border-radius: var(--radius-card);
+  padding: 36px 32px;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-card-orange);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  text-decoration: none;
+}
+
+.continueBanner:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(224, 83, 38, 0.35);
+}
+
+.continueHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.continueTag {
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+}
+
+.continueArrow {
+  color: #FFFFFF;
+  transition: transform var(--transition-fast);
+}
+
+.continueBanner:hover .continueArrow {
+  transform: translateX(4px);
+}
+
+.continueContent {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.videoThumbnail {
+  width: 140px;
+  height: 85px;
+  border-radius: 12px;
+  background-color: var(--accent-black);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.videoBackdrop {
+  position: absolute;
+  inset: 0;
+  background-color: var(--accent-black);
+}
+
+.playCircle {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-pill);
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  z-index: 2;
+  transition: transform var(--transition-fast);
+}
+
+.continueBanner:hover .playCircle {
+  transform: scale(1.1);
+}
+
+.durationBadge {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  background-color: rgba(13, 13, 13, 0.85);
+  font-size: 10px;
+  font-weight: 800;
+  color: #FFFFFF;
+  padding: 2px 6px;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.continueDetails {
+  flex: 1;
+}
+
+.lessonTitle {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #FFFFFF;
+  letter-spacing: -0.03em;
+  margin-bottom: 6px;
+}
+
+.lessonDesc {
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Button matching LP .btn .btn-black */
+.continueButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--accent-black);
+  color: #FFFFFF;
+  padding: 10px 22px;
+  border-radius: var(--radius-pill);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: all var(--transition-fast);
+}
+
+.continueButton:hover {
+  background-color: #000000;
+  transform: translateY(-1px);
+}
+
+/* Main Two-Column Layout */
+.dashboardMainLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 28px;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+@media (max-width: 1150px) {
+  .dashboardMainLayout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

@@ -1,0 +1,321 @@
+@import './variables.css';
+
+/* Reset & Base matching BiblePace LP */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+  color: var(--text-dark);
+  background-color: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  letter-spacing: -0.04em;
+  color: var(--text-dark);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* App Shell Layout - 100% Screen Fit without Any Horizontal Drag */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+  position: relative;
+}
+
+.main-content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  width: calc(100% - var(--sidebar-width));
+  max-width: calc(100% - var(--sidebar-width));
+  margin-left: var(--sidebar-width);
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+}
+
+@media (max-width: 1024px) {
+  .main-content-wrapper {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+  }
+}
+
+.page-body {
+  flex: 1;
+  padding: 32px 36px 64px 36px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin: 0;
+  background-color: var(--bg-primary);
+}
+
+@media (max-width: 1200px) {
+  .page-body {
+    padding: 24px 24px 48px 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-body {
+    padding: 20px 16px 40px 16px;
+  }
+}
+
+/* BiblePace Landing Page (LP) Global Design System Classes */
+.lp-header-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-2xl);
+}
+
+.lp-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.lp-pill-black {
+  background-color: var(--accent-black);
+  color: #FFFFFF;
+}
+
+.lp-pill-orange {
+  background-color: var(--primary);
+  color: #FFFFFF;
+}
+
+.lp-pill-gray {
+  background-color: var(--bg-card-gray);
+  color: var(--text-dark);
+}
+
+.lp-pill-outline {
+  background-color: transparent;
+  border: 1.5px solid var(--accent-black);
+  color: var(--accent-black);
+}
+
+.lp-title {
+  font-size: clamp(2rem, 3.2vw, 2.85rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  color: var(--text-dark);
+  margin-top: 4px;
+}
+
+.lp-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 760px;
+  font-weight: 500;
+}
+
+/* LP Cards - Solid and Flat, 3 colors only */
+.lp-card-white {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 36px 32px;
+  box-shadow: var(--shadow-card-white);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.lp-card-white:hover {
+  border-color: var(--accent-black);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+}
+
+.lp-card-black {
+  background-color: var(--accent-black);
+  border-radius: var(--radius-card);
+  padding: 36px 32px;
+  color: #FFFFFF;
+  box-shadow: var(--shadow-card-black);
+  transition: transform var(--transition-fast);
+}
+
+.lp-card-black:hover {
+  transform: translateY(-2px);
+}
+
+.lp-card-orange {
+  background-color: var(--primary);
+  border-radius: var(--radius-card);
+  padding: 36px 32px;
+  color: #FFFFFF;
+  box-shadow: var(--shadow-card-orange);
+  transition: transform var(--transition-fast);
+}
+
+.lp-card-orange:hover {
+  transform: translateY(-2px);
+}
+
+/* LP Action Buttons */
+.lp-btn-black {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--accent-black);
+  color: #FFFFFF;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+.lp-btn-black:hover {
+  background-color: #000000;
+  transform: translateY(-1px);
+}
+
+.lp-btn-orange {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--primary);
+  color: #FFFFFF;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+.lp-btn-orange:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.lp-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: transparent;
+  border: 1.5px solid var(--accent-black);
+  color: var(--accent-black);
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.lp-btn-outline:hover {
+  background-color: var(--accent-black);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 9999px;
+}
+
+/* Flat Solid Notebook Paper styling for the student's journal */
+.notebook-paper {
+  background-color: #FFFFFF;
+  line-height: 32px;
+  padding: 20px 24px;
+  border: 1px solid var(--color-border);
+  border-left: 6px solid var(--primary);
+  border-radius: var(--radius-sm);
+  color: var(--text-dark);
+}
+
+/* Micro-animations */
+@keyframes pulseSubtle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 2.5s infinite ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.2s ease-out forwards;
+}
